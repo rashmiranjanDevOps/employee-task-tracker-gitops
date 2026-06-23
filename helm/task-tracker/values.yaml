@@ -1,7 +1,7 @@
 global:
   imageRegistry: "897074277336.dkr.ecr.us-east-1.amazonaws.com"
   imagePullSecrets: []
-  environment: production
+  environment: dev
   domain: rashmidevops.xyz
 
 image:
