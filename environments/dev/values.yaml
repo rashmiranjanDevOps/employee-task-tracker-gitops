@@ -14,7 +14,7 @@ task-tracker:
     replicaCount: 1
     image:
       repository: task-tracker-backend
-      tag: "latest"   # updated automatically by CI
+      tag: "11"   # updated automatically by CI
     resources:
       requests:
         cpu: "100m"
@@ -35,7 +35,7 @@ task-tracker:
     replicaCount: 1
     image:
       repository: task-tracker-frontend
-      tag: "latest"   # updated automatically by CI
+      tag: "11"   # updated automatically by CI
     hpa:
       enabled: false
 
