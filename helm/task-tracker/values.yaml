@@ -1,5 +1,5 @@
 global:
-  imageRegistry: ""
+  imageRegistry: "897074277336.dkr.ecr.us-east-1.amazonaws.com"
   imagePullSecrets: []
   environment: production
   domain: rashmidevops.xyz
@@ -12,8 +12,8 @@ image:
 backend:
   replicaCount: 2
   image:
-    repository: task-tracker-backend
-    tag: ""
+    repository: 897074277336.dkr.ecr.us-east-1.amazonaws.com/task-tracker-backend
+    tag: "10"
   resources:
     requests:
       cpu: "100m"
@@ -43,7 +43,7 @@ backend:
 frontend:
   replicaCount: 2
   image:
-    repository: task-tracker-frontend
+    repository: 897074277336.dkr.ecr.us-east-1.amazonaws.com/task-tracker-frontend
     tag: ""
   resources:
     requests:
@@ -73,11 +73,11 @@ ingress:
     backend: api.rashmidevops.xyz
   tls:
     enabled: true
-    certificateArn: ""
+    certificateArn: "arn:aws:acm:us-east-1:897074277336:certificate/65d642d5-c198-4075-9132-58e371b414f3"
   # ARN of the aws_wafv2_web_acl (see terraform/modules/waf) to attach to the
   # ALB that the AWS Load Balancer Controller creates for this Ingress.
   # Leave empty to deploy without WAF protection.
-  wafAclArn: ""
+  wafAclArn: "arn:aws:wafv2:us-east-1:897074277336:regional/webacl/task-tracker-dev-waf/4d65e0f4-7470-4ee0-8eec-2bcdf3588bcb"
 
 monitoring:
   enabled: true
@@ -88,11 +88,11 @@ networkPolicy:
 
 serviceAccount:
   create: true
-  irsaRoleArn: ""
+  irsaRoleArn: "arn:aws:iam::897074277336:role/task-tracker-dev-app-irsa-role"
 
 secrets:
-  dbHost: ""
-  dbUser: ""
-  dbPassword: ""
-  jwtSecret: ""
-  jwtRefreshSecret: ""
+  dbHost: "task-tracker-dev-mysql.cq3myy4smi8a.us-east-1.rds.amazonaws.com"
+  dbUser: "tasktracker_admin"
+  dbPassword: "b9z)JJ(E=BJpwJqx!g3SOSNRluY6hk+x"
+  jwtSecret: " 4b747b91769305e8a4e1c3a06e6b54636d6632b054a68042220b0faea3c0e7a6950a32677d3538b4c7494113006ef149"
+  jwtRefreshSecret: " 3c821e111b8a4e4ad61b21183553dfab4442b19deeb8d96026317eee1651b6dceec54f42a78dd63b511353cd5214a864"

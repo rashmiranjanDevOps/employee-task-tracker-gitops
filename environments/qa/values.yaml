@@ -52,11 +52,11 @@ task-tracker:
 
   serviceAccount:
     create: true
-    irsaRoleArn: "REPLACE_WITH_IRSA_ROLE_ARN"
+    irsaRoleArn: "arn:aws:iam::897074277336:role/task-tracker-dev-app-irsa-role"
 
   secrets:
-    dbHost: ""
-    dbUser: ""
-    dbPassword: ""
-    jwtSecret: ""
-    jwtRefreshSecret: ""
+    dbHost: "task-tracker-dev-mysql.cq3myy4smi8a.us-east-1.rds.amazonaws.com"
+    dbUser: "tasktracker_admin"
+    dbPassword: "b9z)JJ(E=BJpwJqx!g3SOSNRluY6hk+x"
+    jwtSecret: " 4b747b91769305e8a4e1c3a06e6b54636d6632b054a68042220b0faea3c0e7a6950a32677d3538b4c7494113006ef149"
+    jwtRefreshSecret: " 3c821e111b8a4e4ad61b21183553dfab4442b19deeb8d96026317eee1651b6dceec54f42a78dd63b511353cd5214a864"
