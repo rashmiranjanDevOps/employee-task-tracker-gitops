@@ -30,6 +30,7 @@ task-tracker:
       LOG_LEVEL: debug
       RATE_LIMIT_MAX: "500"
       DB_POOL_MAX: "5"
+      DB_NAME: tasktracker_dev
 
   frontend:
     replicaCount: 1
