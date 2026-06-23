@@ -86,6 +86,7 @@ metadata:
     {{- include "task-tracker.labels" . | nindent 4 }}
   annotations:
     kubernetes.io/ingress.class: {{ .Values.ingress.class }}
+    alb.ingress.kubernetes.io/healthcheck-path: "/health"
     {{- range $key, $value := .Values.ingress.annotations }}
     {{ $key }}: {{ $value | quote }}
     {{- end }}
