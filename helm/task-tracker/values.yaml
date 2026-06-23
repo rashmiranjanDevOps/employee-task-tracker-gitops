@@ -5,14 +5,14 @@ global:
   domain: rashmidevops.xyz
 
 image:
-  registry: ""
+  registry: "897074277336.dkr.ecr.us-east-1.amazonaws.com"
   tag: "latest"
   pullPolicy: Always
 
 backend:
   replicaCount: 2
   image:
-    repository: 897074277336.dkr.ecr.us-east-1.amazonaws.com/task-tracker-backend
+    repository: task-tracker-backend
     tag: "10"
   resources:
     requests:
@@ -43,8 +43,8 @@ backend:
 frontend:
   replicaCount: 2
   image:
-    repository: 897074277336.dkr.ecr.us-east-1.amazonaws.com/task-tracker-frontend
-    tag: ""
+    repository: task-tracker-frontend
+    tag: "10"
   resources:
     requests:
       cpu: "50m"
