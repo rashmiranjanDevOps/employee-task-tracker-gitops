@@ -47,7 +47,7 @@ task-tracker:
       backend: dev-api.rashmidevops.xyz
     tls:
       enabled: true
-      certificateArn: "arn:aws:acm:us-east-1:897074277336:certificate/091e16a8-8c97-4f48-a3a5-07cd7b5f594d"
+      certificateArn: "arn:aws:acm:us-east-1:897074277336:certificate/65d642d5-c198-4075-9132-58e371b414f3"
 
   serviceAccount:
     create: true
