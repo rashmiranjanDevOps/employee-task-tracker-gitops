@@ -18,7 +18,7 @@ data:
   DB_NAME: "tasktracker_{{ .Values.global.environment }}"
   DB_POOL_MAX: {{ .Values.backend.env.DB_POOL_MAX | quote }}
   DB_POOL_MIN: {{ .Values.backend.env.DB_POOL_MIN | quote }}
-  ALLOWED_ORIGINS: "https://app.{{ .Values.global.domain }}"
+  ALLOWED_ORIGINS: "https://dev-app.{{ .Values.global.domain }}"
 
 ---
 # ─── Secret ───────────────────────────────────────────────────────────────────
