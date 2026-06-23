@@ -69,8 +69,8 @@ ingress:
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/ssl-redirect: "443"
   hosts:
-    frontend: app.rashmidevops.xyz
-    backend: api.rashmidevops.xyz
+    frontend: dev-app.rashmidevops.xyz
+    backend: dev-api.rashmidevops.xyz
   tls:
     enabled: true
     certificateArn: "arn:aws:acm:us-east-1:897074277336:certificate/65d642d5-c198-4075-9132-58e371b414f3"
