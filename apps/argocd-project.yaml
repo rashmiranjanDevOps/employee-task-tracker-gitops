@@ -10,14 +10,21 @@ spec:
   sourceRepos:
     - https://github.com/rashmiranjandevops/employee-task-tracker-gitops.git
   destinations:
+    - namespace: task-tracker
+      server: https://kubernetes.default.svc
+
     - namespace: task-tracker-dev
       server: https://kubernetes.default.svc
+
     - namespace: task-tracker-qa
       server: https://kubernetes.default.svc
+
     - namespace: task-tracker-staging
       server: https://kubernetes.default.svc
+
     - namespace: task-tracker-prod
       server: https://kubernetes.default.svc
+
     - namespace: argocd
       server: https://kubernetes.default.svc
   clusterResourceWhitelist:
